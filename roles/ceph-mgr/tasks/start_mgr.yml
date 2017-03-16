@@ -1,0 +1,7 @@
+---
+- name: start and add that the mgr service to the init sequence
+  service:
+    name: "ceph-mgr@{{ ansible_hostname }}"
+    state: started
+    enabled: yes
+  changed_when: false
